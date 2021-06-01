@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - white_light',
-    title: 'white_light',
+    titleTemplate: 'White light est',
+    title: 'White light est',
     htmlAttrs: {
       lang: 'en',
     },
@@ -19,14 +19,25 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/png', href: '/logo.png' },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
+      },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/index.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/index', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -46,9 +57,8 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
       themes: {
-        dark: {
+        light: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,

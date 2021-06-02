@@ -29,7 +29,7 @@
       <v-row>
         <v-col cols="12">
           <v-img
-            v-animate-onscroll.repeat="'animate__animated animate__backOutDown'"
+            eager
             data-scroll
             data-scroll-speed="1"
             :src="require('~/assets/macbook.png')"
@@ -40,7 +40,6 @@
           >
             <div>
               <span
-                v-animate-onscroll="'animate__animated animate__backInDown'"
                 data-scroll
                 data-scroll-speed="1"
                 class="
@@ -113,7 +112,7 @@
             v-for="(img, index) in imgs"
             :key="index"
             style="width: 300px; height: 300px"
-            ><v-img width="100%" height="100%" :src="img"> </v-img
+            ><v-img eager width="100%" height="100%" :src="img"> </v-img
           ></swiper-slide>
 
           <div slot="pagination" class="swiper-pagination"></div>
@@ -153,6 +152,7 @@
             target="_blank"
           >
             <v-img
+              eager
               class="white--text align-end"
               height="200px"
               :src="
@@ -170,6 +170,7 @@
             target="_blank"
           >
             <v-img
+              eager
               class="white--text align-end"
               height="200px"
               :src="
@@ -187,6 +188,7 @@
             target="_blank"
           >
             <v-img
+              eager
               class="white--text align-end"
               height="200px"
               :src="
@@ -204,6 +206,7 @@
             target="_blank"
           >
             <v-img
+              eager
               class="white--text align-end"
               height="200px"
               :src="
@@ -234,6 +237,7 @@
         <swiper-slide>
           <v-card href="tel:+966555416673" target="_blank">
             <v-img
+              eager
               class="white--text align-end"
               height="200px"
               :src="require('~/assets/freestocks-GxM9gkLJbwY-unsplash.jpeg')"
@@ -246,6 +250,7 @@
         <swiper-slide>
           <v-card href="tel:+966555366343" target="_blank">
             <v-img
+              eager
               class="white--text align-end"
               height="200px"
               :src="require('~/assets/freestocks-GxM9gkLJbwY-unsplash.jpeg')"
@@ -258,6 +263,7 @@
         <swiper-slide>
           <v-card href="tel:+966555966245" target="_blank">
             <v-img
+              eager
               class="white--text align-end"
               height="200px"
               :src="require('~/assets/freestocks-GxM9gkLJbwY-unsplash.jpeg')"
@@ -270,6 +276,7 @@
         <swiper-slide>
           <v-card href="tel:+966555148665" target="_blank">
             <v-img
+              eager
               class="white--text align-end"
               height="200px"
               :src="require('~/assets/freestocks-GxM9gkLJbwY-unsplash.jpeg')"
@@ -345,16 +352,15 @@ export default {
       },
       imgs: [
         '/logo.png',
+        require('~/assets/pexels-monstera-5996954.jpeg'),
         require('~/assets/pexels-anete-lusina-6331144.jpeg'),
         require('~/assets/pexels-cottonbro-6466228.jpeg'),
         require('~/assets/pexels-cottonbro-6466482.jpeg'),
-        require('~/assets/pexels-polina-tankilevitch-4440568.jpeg'),
         '/logo.png',
-
+        require('~/assets/pexels-polina-tankilevitch-4440568.jpeg'),
         require('~/assets/pexels-rodnae-productions-5591859.jpeg'),
         require('~/assets/pexels-karolina-grabowska-4239103.jpeg'),
         require('~/assets/pexels-monstera-5331123.jpeg'),
-        require('~/assets/pexels-monstera-5996954.jpeg'),
         '/logo.png',
       ],
     }

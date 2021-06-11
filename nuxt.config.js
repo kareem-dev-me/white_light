@@ -17,7 +17,14 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { name: 'keywords', content: 'workers' },
+      { name: 'author', content: 'Kareem El-Basuony kareembasuonyg@gmail.com' },
+
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Best company for workers',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/logo.png' },

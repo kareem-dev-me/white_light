@@ -7,7 +7,7 @@
           data-scroll-speed="1"
           class="text-h3 text-yellow animate__animated animate__fadeInDown"
         >
-          شركة الضوء <span class="white--text">الابيض</span> للخادمات والمربيات
+          مكتب الضوء <span class="white--text">الابيض</span> للخادمات
         </p>
         <v-btn
           data-scroll
@@ -140,87 +140,34 @@
         تواصل معنا عن طريق واتس اب
         <v-icon size="30" color="#03E776">mdi-whatsapp</v-icon>
       </p>
-      <swiper
-        data-scroll
-        data-scroll-speed="1"
-        class="swiper"
-        :options="swiperOption"
-      >
-        <swiper-slide>
+      <v-row>
+        <v-col
+          v-for="(item, index) in whats"
+          :key="index"
+          cols="12"
+          md="3"
+          data-scroll
+          data-scroll-speed="1"
+        >
           <v-card
-            href="https://api.whatsapp.com/send?phone=+966555416673"
+            :href="`https://api.whatsapp.com/send?phone=+966${item}`"
             target="_blank"
+            max-height="60"
           >
             <v-img
+              max-height="60"
               eager
               class="white--text align-end"
-              height="200px"
               :src="
                 require('~/assets/mika-baumeister-uKdkh25_wc0-unsplash.jpeg')
               "
-              gradient="#00000090,#00000050"
+              gradient="#000000a0,#00000090"
             >
-              <v-card-title>0555416673</v-card-title>
+              <v-card-title class="justify-center"> 0{{ item }} </v-card-title>
             </v-img>
-          </v-card></swiper-slide
-        >
-        <swiper-slide>
-          <v-card
-            href="https://api.whatsapp.com/send?phone=+966555366343"
-            target="_blank"
-          >
-            <v-img
-              eager
-              class="white--text align-end"
-              height="200px"
-              :src="
-                require('~/assets/mika-baumeister-uKdkh25_wc0-unsplash.jpeg')
-              "
-              gradient="#00000090,#00000050"
-            >
-              <v-card-title>0555366343</v-card-title>
-            </v-img>
-          </v-card></swiper-slide
-        >
-        <swiper-slide>
-          <v-card
-            href="https://api.whatsapp.com/send?phone=+966555966245"
-            target="_blank"
-          >
-            <v-img
-              eager
-              class="white--text align-end"
-              height="200px"
-              :src="
-                require('~/assets/mika-baumeister-uKdkh25_wc0-unsplash.jpeg')
-              "
-              gradient="#00000090,#00000050"
-            >
-              <v-card-title>0555966245</v-card-title>
-            </v-img>
-          </v-card></swiper-slide
-        >
-        <swiper-slide>
-          <v-card
-            href="https://api.whatsapp.com/send?phone=+966555148665"
-            target="_blank"
-          >
-            <v-img
-              eager
-              class="white--text align-end"
-              height="200px"
-              :src="
-                require('~/assets/mika-baumeister-uKdkh25_wc0-unsplash.jpeg')
-              "
-              gradient="#00000090,#00000050"
-            >
-              <v-card-title>0555148665</v-card-title>
-            </v-img>
-          </v-card></swiper-slide
-        >
-
-        <div slot="pagination" class="swiper-pagination"></div>
-      </swiper>
+          </v-card>
+        </v-col>
+      </v-row>
     </div>
     <v-divider></v-divider>
     <div class="pa-10">
@@ -228,67 +175,28 @@
         تواصل معنا عن طريق الجوال
         <v-icon size="30" color="black">mdi-cellphone</v-icon>
       </p>
-      <swiper
-        data-scroll
-        data-scroll-speed="1"
-        class="swiper"
-        :options="swiperOption"
-      >
-        <swiper-slide>
-          <v-card href="tel:+966555416673" target="_blank">
+      <v-row>
+        <v-col
+          v-for="(item, index) in mobiles"
+          :key="index"
+          cols="12"
+          md="3"
+          data-scroll
+          data-scroll-speed="1"
+        >
+          <v-card :href="`tel:+966${item}`" target="_blank" max-height="60">
             <v-img
+              max-height="60"
               eager
               class="white--text align-end"
-              height="200px"
               :src="require('~/assets/freestocks-GxM9gkLJbwY-unsplash.jpeg')"
-              gradient="#00000090,#00000050"
+              gradient="#000000a0,#00000090"
             >
-              <v-card-title>0555416673</v-card-title>
+              <v-card-title class="justify-center">0{{ item }}</v-card-title>
             </v-img>
-          </v-card></swiper-slide
-        >
-        <swiper-slide>
-          <v-card href="tel:+966555366343" target="_blank">
-            <v-img
-              eager
-              class="white--text align-end"
-              height="200px"
-              :src="require('~/assets/freestocks-GxM9gkLJbwY-unsplash.jpeg')"
-              gradient="#00000090,#00000050"
-            >
-              <v-card-title>0555366343</v-card-title>
-            </v-img>
-          </v-card></swiper-slide
-        >
-        <swiper-slide>
-          <v-card href="tel:+966555966245" target="_blank">
-            <v-img
-              eager
-              class="white--text align-end"
-              height="200px"
-              :src="require('~/assets/freestocks-GxM9gkLJbwY-unsplash.jpeg')"
-              gradient="#00000090,#00000050"
-            >
-              <v-card-title>0555966245</v-card-title>
-            </v-img>
-          </v-card></swiper-slide
-        >
-        <swiper-slide>
-          <v-card href="tel:+966555148665" target="_blank">
-            <v-img
-              eager
-              class="white--text align-end"
-              height="200px"
-              :src="require('~/assets/freestocks-GxM9gkLJbwY-unsplash.jpeg')"
-              gradient="#00000090,#00000050"
-            >
-              <v-card-title>0555148665</v-card-title>
-            </v-img>
-          </v-card></swiper-slide
-        >
-
-        <div slot="pagination" class="swiper-pagination"></div>
-      </swiper>
+          </v-card>
+        </v-col>
+      </v-row>
     </div>
   </v-app>
 </template>
@@ -363,6 +271,8 @@ export default {
         require('~/assets/pexels-monstera-5331123.jpeg'),
         '/logo.png',
       ],
+      mobiles: ['555966245', '555366343', '555148665', '555416673'],
+      whats: ['555148665', '555366343', '555966245', '555416673'],
     }
   },
 
@@ -396,7 +306,6 @@ export default {
     url('~assets/clayton-1by_GbwEMwc-unsplash.jpeg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 .text-yellow {
   color: #eeb328;

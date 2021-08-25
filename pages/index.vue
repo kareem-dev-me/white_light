@@ -7,7 +7,7 @@
           data-scroll-speed="1"
           class="text-h3 text-yellow animate__animated animate__fadeInDown"
         >
-          مكتب الضوء <span class="white--text">الابيض</span> للخادمات
+          مكتب اختيار <span class="white--text">القمة</span> للخادمات
         </p>
         <v-btn
           data-scroll
@@ -271,8 +271,8 @@ export default {
         require('~/assets/pexels-monstera-5331123.jpeg'),
         '/logo.png',
       ],
-      whats: ['555966245', '555366343', '555148665', '555416673'],
-      mobiles: ['555148665', '555366343', '555966245', '555416673'],
+      mobiles: ['580393123', '580381152', '580381135', '580393834'],
+      whats: ['580381152', '580381135', '580393123', '580393834'],
     }
   },
 

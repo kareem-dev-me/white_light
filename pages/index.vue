@@ -142,15 +142,15 @@
       </p>
       <v-row>
         <v-col
-          v-for="(item, index) in whats"
-          :key="index"
+          v-for="item in whatsapp"
+          :key="item.id"
           cols="12"
           md="3"
           data-scroll
           data-scroll-speed="1"
         >
           <v-card
-            :href="`https://api.whatsapp.com/send?phone=+966${item}`"
+            :href="`https://api.whatsapp.com/send?phone=${item.num}`"
             target="_blank"
             max-height="60"
           >
@@ -163,7 +163,9 @@
               "
               gradient="#000000a0,#00000090"
             >
-              <v-card-title class="justify-center"> 0{{ item }} </v-card-title>
+              <v-card-title class="justify-center">
+                {{ item.num }}
+              </v-card-title>
             </v-img>
           </v-card>
         </v-col>
@@ -177,14 +179,14 @@
       </p>
       <v-row>
         <v-col
-          v-for="(item, index) in mobiles"
-          :key="index"
+          v-for="item in contact"
+          :key="item.id"
           cols="12"
           md="3"
           data-scroll
           data-scroll-speed="1"
         >
-          <v-card :href="`tel:+966${item}`" target="_blank" max-height="60">
+          <v-card :href="`tel:${item.num}`" target="_blank" max-height="60">
             <v-img
               max-height="60"
               eager
@@ -192,7 +194,7 @@
               :src="require('~/assets/freestocks-GxM9gkLJbwY-unsplash.jpeg')"
               gradient="#000000a0,#00000090"
             >
-              <v-card-title class="justify-center">0{{ item }}</v-card-title>
+              <v-card-title class="justify-center">{{ item.num }}</v-card-title>
             </v-img>
           </v-card>
         </v-col>
@@ -271,12 +273,12 @@ export default {
         require('~/assets/pexels-monstera-5331123.jpeg'),
         '/logo.png',
       ],
-      mobiles: ['580393123', '580381152', '580381135', '580393834'],
-      whats: ['580381152', '580381135', '580393123', '580393834'],
+      contact: [],
+      whatsapp: [],
     }
   },
 
-  mounted() {
+  async mounted() {
     /* eslint-disable-next-line */
     const locomotiveScroll = new this.locomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
@@ -294,6 +296,16 @@ export default {
     setTimeout(() => {
       locomotiveScroll.update()
     }, 5000)
+    await fetch(
+      'https://whitelightest.com/pagepanel/api/v1/numbers?type=whatsapp'
+    )
+      .then((response) => response.json())
+      .then((data) => (this.whatsapp = data.data))
+    await fetch(
+      'https://whitelightest.com/pagepanel/api/v1/numbers?type=contact'
+    )
+      .then((response) => response.json())
+      .then((data) => (this.contact = data.data))
   },
 }
 </script>

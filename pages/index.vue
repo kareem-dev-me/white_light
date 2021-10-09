@@ -296,16 +296,12 @@ export default {
     setTimeout(() => {
       locomotiveScroll.update()
     }, 5000)
-    await fetch(
-      'https://whitelightest.com/pagepanel/api/v1/numbers?type=whatsapp'
-    )
-      .then((response) => response.json())
-      .then((data) => (this.whatsapp = data.data))
-    await fetch(
-      'https://whitelightest.com/pagepanel/api/v1/numbers?type=contact'
-    )
-      .then((response) => response.json())
-      .then((data) => (this.contact = data.data))
+    await this.$axios
+      .$get('https://aikhtiaralqima.com/pagepanel/api/v1/numbers?type=whatsapp')
+      .then((response) => (this.whatsapp = response.data))
+    await this.$axios
+      .$get('https://aikhtiaralqima.com/pagepanel/api/v1/numbers?type=contact')
+      .then((response) => (this.contact = response.data))
   },
 }
 </script>

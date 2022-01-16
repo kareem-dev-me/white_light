@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: 'White light est',
-    title: 'White light est',
+    titleTemplate: 'مكتب اختيار القمة للخادمات',
+    title: 'مكتب اختيار القمة للخادمات',
     htmlAttrs: {
       lang: 'en',
     },

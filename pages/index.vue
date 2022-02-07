@@ -297,10 +297,14 @@ export default {
       locomotiveScroll.update()
     }, 5000)
     await this.$axios
-      .$get('https://aikhtiaralqima.com/pagepanel/api/v1/numbers?type=whatsapp')
+      .$get(
+        'https://alqimaforservices.com/pagepanel/api/v1/numbers?type=whatsapp'
+      )
       .then((response) => (this.whatsapp = response.data))
     await this.$axios
-      .$get('https://aikhtiaralqima.com/pagepanel/api/v1/numbers?type=contact')
+      .$get(
+        'https://alqimaforservices.com/pagepanel/api/v1/numbers?type=contact'
+      )
       .then((response) => (this.contact = response.data))
   },
 }
